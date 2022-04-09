@@ -1,7 +1,10 @@
 # SOLaCE: Semantic-Level, Object and Language-Guided Coherence Evaluation
-This repository contains code and the dataset of the SOLaCE framework for evaluating visual concepts (ICLR 2022 OSC Workshop).
+This repository contains code and the dataset of the SOLaCE framework for evaluating visual concepts (presented at the ICLR 2022 OSC Workshop).
+The full approach is described in our Paper:
 
-This code allows to run the framework for different datasets and to reproduce the results in our paper. It also contains the exact dataset of 2600 human assessments of visual concepts (in anonymized form) that was used in our user study.
+T. Leemann, Y. Rong, S. Kraft, E. Kasneci and G. Kasneci: [Coherence Evaluation of Visual Concepts With Objects and Language](https://openreview.net/pdf?id=rRzSSS_Ucg9) (2022)
+
+The code allows to run the framework for different datasets and to reproduce the results in our paper. It also contains the exact dataset of 2600 human assessments of visual concepts (in anonymized form) that was used in our user study.
 
 Tested with ``detectron=0.4.1, torch=1.7.1, python=3.7.10, cuda=11.0``
 
@@ -32,3 +35,16 @@ Due to space constraints and copyright reasons, we cannot provide the full image
 To assemble the concepts used in our user study run ``python3 add_images_script.py data/concepts_wo_images <path containing places356 validation images> <path containing AwA2 images>``. This will results in the same concept files that were also used in our user study.
 
 The annotations of the users that were used as a ground truth in this paper can be found in the folder ``user_study``. See ``AnalysisUserStudy`` for an example how to use them.
+
+## Citation:
+If you find this code and data useful, please consider citing our paper:
+```
+@inproceedings{
+leemann2022coherence,
+title={Coherence Evaluation of Visual Concepts With Objects and Language},
+author={Tobias Leemann and Yao Rong and Stefan Kraft and Enkelejda Kasneci and Gjergji Kasneci},
+booktitle={ICLR2022 Workshop on the Elements of Reasoning: Objects, Structure and Causality},
+year={2022},
+url={https://openreview.net/forum?id=rRzSSS_Ucg9}
+}
+```
